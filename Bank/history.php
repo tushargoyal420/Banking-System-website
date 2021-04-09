@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Bank of Nation</title>
     <link href="style.css" rel="stylesheet">
+    <script src=""> </script>
   </head>
   <body>
     <div class="navbar">
@@ -19,21 +20,24 @@
         <li><a href="details.php"> Customers</a> </li>
       </ul>
     </div>
-    <div class="column">
+    <div class="column" style ="height:auto;">
+      <div class="leftcol" style ="width: calc(20% - 30px);min-height:100%; ">
 
-      <div class="leftcol" style ="width: calc(20% - 30px)">
-        <div class="leftcol-data">
-          <p> Contents:<br> </p>
-          <ul>
-            <li><a href="homepage.php"><mo> Home </mo></a> </li>
-            <li><a href="transfer.php"><mo> Transfer Money</mo></a> </li>
-            <li><mo><b><a href="history.php"> Transactions</a></mo></b> </li>
-            <li><a href="details.php"><mo> Customers</mo></a> </li>
+       <div class="leftcol-data">
+          <p class="content"> Contents:<br> </p>
+          <ul >
+            <li><a href="homepage.php">  Home  </a> </li>
+            <li><a href="transfer.php">  Transfer Money </a> </li>
+            <li> <b><a href="history.php"> Transactions</a> </b> </li>
+            <li><a href="details.php">  Customers </a> </li>
           </ul>
         </div>
       </div>
+<script>
+      document.getElementByClassName('leftcol').style.height= document.getElementsByClassName('centercol').style.height;
+</script>
 
-      <div class="centercol" style ="width: calc(80% - 50px)" >
+      <div class="centercol" style ="width: calc(80% - 50px); min-height:100% ; height: auto" >
         <div class="leftcol-data">
           <div class="heading">
             <p>All Transactions:</p>
@@ -78,8 +82,9 @@
           echo "</tr>";
      }
   ?>
-  </table>
+</table>
         </div>
       </div>
     </div>
+
   </body>

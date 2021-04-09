@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      <div class="centercol">
+      <div class="centercol" style ="width: calc(80% - 50px)">
         <div class="leftcol-data">
           <div class="heading">
             <p> Welcome to the Bank </p>
@@ -64,12 +64,12 @@
         </div>
       </div>
 
-      <div class="rightcol">
+      <!-- <div class="rightcol">
         r
         <div class="leftcol-data">
           this is right
         </div>
-      </div>
+      </div> -->
 
     </div>
 

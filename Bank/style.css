@@ -1,6 +1,10 @@
 *{
   padding: auto;margin:auto;
 }
+
+/* .leftcol-data{ */
+  /* height: 1000px; */
+  /* background-color: green;} */
 .navbar{
   background-color: #006666;
   width: calc( 100% - 20px);
@@ -23,79 +27,104 @@
   height:auto;
   /* background-color:  ; */
   /* display: none; */
-}
-.pannel ul{
-  background-color:  #ccffff;
-  width: 100%;
-  float: right;
-  text-align: center;
-  margin: auto;
-  /* all */
-  padding: 10px;
-  /* top-bottom   left-right */
-  /* top right bottom left    clockwise*/
-  /* padding: 10px 50px; */
-  /* padding: 20px 10px 10px 50px; */
-}
-.pannel ul li{
-  display: inline;
-  margin-left: 100px;
-}
+  }
+  .pannel ul{
+      background-color:  #ccffff;
+      width: 100%;
+      float: right;
+      text-align: center;
+      margin: auto;
+      /* all */
+      padding: 10px;
+      /* top-bottom   left-right */
+      /* top right bottom left    clockwise*/
+      /* padding: 10px 50px; */
+      /* padding: 20px 10px 10px 50px; */
+    }
+    .pannel ul li{
+      display: inline;
+      margin-left: 100px;
+      transition: transform 0.3s;
+    }
+    .pannel ul li:hover{
+        transform: scale(1.1,1.1);
+        color: red;
+      }
 
-.pannel ul li a{
-  /* background-color: yellow; */
-  color:black;
-  list-style: none;
-  font-size: 4vh;
-  font-weight: 500;
-  /* color: black; */
-  font-weight: 550;
-  text-decoration: none;
-}
+
+    .pannel ul li a{
+      /* background-color: yellow; */
+      color:black;
+      list-style: none;
+      font-size: 4vh;
+      font-weight: 500;
+      font-weight: 550;
+      text-decoration: none;
+    }
+    .pannel ul li:hover{
+        transform: scale(1.1,1.1);
+        color: red;
+      }
 .column{
   /* background-color: grey; */
   width: calc(100% - 60px);
   padding: 0px 30px;
   height: auto;
   display: block;
+  display: flex;
 }
+/* background-color: blue; */
 .column .leftcol{
-  /* background-color: blue; */
   float: left;
   margin-top: 20px;
   box-shadow: 0px 0px 15px 0.5px grey;
-  /* display: inline; */
   width:calc(20% - 30px);
   height:500px;
    padding: 10px;
   }
-.column .leftcol .leftcol-data p{
-  font-size: 4vh;
+
+  .column .leftcol .leftcol-data .content{
+      font-size: 4vh;
+      margin-left:10px;
+      margin-bottom: 15px;
+      }
+    .column .leftcol .leftcol-data ul, li, a{
+      color:black;
+      list-style: none;
+      font-size: 3vh;
+      text-decoration: none;
+      list-style-type: square;
+      margin-top:4px;
+      font-family: segoe ui;
+      font-weight: 650px;
+    }
+    .column .leftcol .leftcol-data li{
+      transition: transform 0.3s;
 }
-.column .leftcol .leftcol-data ul, li, a, mo{
-  color:black;
-  list-style: none;
-  font-size: 3vh;
-  /* font-weight: 500; */
-  /* color: black; */
-  /* font-weight: 550; */
-  /* text-decoration: none; */
-}
-.column .leftcol .leftcol-data ul, li, mo, b, a{
-  font-weight: 650px;
-}
+    .column .leftcol .leftcol-data li:hover{
+        transform: scale(1.1,1.1);
+        color: #006666;
+
+      }
+    .column .leftcol .leftcol-data a:hover{
+      color: #006666;
+      }
+    .column .leftcol .leftcol-data ul, li, b, a{
+      font-weight: 700px;
+    }
 .column .centercol{
   /* background-color: blue; */
-  /* display: inline; */
   float: left;
   margin-top: 20px;
   box-shadow: 0px 0px 15px 0.5px grey;
-  width: calc(60% - 40px);
+  width: calc(80% - 50px);
   height:500px;
   margin-left: 20px;
-  /* margin-right: 20px; */
-  padding: 10px;
+  padding: 10px 10px 30px 10px;
+  margin-bottom:20px;
 }
+
+
 .column .centercol .heading{
   /* background-color: red; */
   text-align: center;
@@ -171,6 +200,54 @@
   padding: 10px;
 
 }
+
+
+#from{
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+   border: none;
+   cursor: pointer;
+}
+
+#values {
+  display: none;  position: absolute;
+  background-color: #f9f9f9;  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#values a {
+  color: black;  padding: 12px 16px;
+  text-decoration: none;  display: block;
+}
+
+#values a:hover {
+  background-color: #f1f1f1
+}
+#from:hover #values {
+  display: block;
+}
+#from:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,11 +1,16 @@
+
+
+
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Bank of Nation</title>
     <link href="style.css" rel="stylesheet">
+
   </head>
   <body>
+
     <div class="navbar">
       <span class="text">
         <p>Modern Bank of Nation</p>
@@ -23,12 +28,12 @@
 
       <div class="leftcol" style ="width: calc(20% - 30px)">
         <div class="leftcol-data">
-          <p> Contents:<br> </p>
+          <p> Contents: </p>
           <ul>
             <li><a href="homepage.php"><mo> Home </mo></a> </li>
             <li><a href="transfer.php"><mo> Transfer Money</mo></a> </li>
             <li><a href="history.php"><mo> Transactions</mo></a> </li>
-            <li><mo><b><a href="details.php"> Customers</a></mo></b> </li>
+            <li><b><a href="details.php"><mo><b> Customers</mo></b></a> </li>
           </ul>
         </div>
       </div>
@@ -36,7 +41,10 @@
       <div class="centercol" style ="width: calc(80% - 50px)" >
         <div class="leftcol-data">
           <div class="heading">
-            <p>All Customers</p>
+      <?php
+          $a=$_POST['abcd'];
+          echo("  <p>Details for Accountno: $a</p>");
+      ?>
           </div>
           <div class="data1">
 
@@ -54,37 +62,63 @@
     }
 
   // sql to create table
-  $sql= "SELECT Accountno, Name FROM Customer";
+  $sql= "SELECT * FROM Customer WHERE Accountno=$a";
 
   $result = $con->query($sql);
 ?>
-  </div>
 
-<table >
-  <tr >
+          </div>
+
+<table>
+  <tr>
     <th> Account no. </th>
     <th> Name </th>
-    <th> View More Details </th>
+    <th> Email address </th>
+    <th> Balance </th>
+    <th> DOB </th>
+    <!-- <th> View Details </th> -->
   </tr>
-
-    <form name="form" action="alldetails.php" method="POST">
-     <?php
-     while($row = $result->fetch_assoc())
-     {
-          echo "<tr>";
-            echo "<td>". $row["Accountno"]."</td>";
-            echo "<td>". $row["Name"]."</td>";
-            echo ("<td><button type='submit' name='abcd' value=\"{$row['Accountno']}\">View More Details</button></td>");
-          echo "</tr>";
-     }
-     ?>
-     </select>
-     </form>
   <?php
+  while($row = $result->fetch_assoc())
+  {
+       echo "<tr>";
+         echo "<td>". $row["Accountno"]."</td>";
+         echo "<td>". $row["Name"]."</td>";
+         echo "<td>". $row["Email"]."</td>";
+         echo "<td>". $row["Balance"]."</td>";
+         echo "<td>". $row["DOB"]."</td>";
+         // echo "<td>". $row["DOB"]."</td>";
 
+       echo "</tr>";
+  }
+           echo("  <p>Transactions History</p>");
+
+?>
+</table>
+<table>
+  <tr>
+    <th> Transaction ID </th>
+    <th> Account no. from </th>
+    <th> Account no. to </th>
+    <th> Amount </th>
+  </tr>
+<?php
+ $sq= "SELECT * FROM Transfer WHERE Accountnofrom=$a OR Accountnoto=$a";
+
+ $res = $con->query($sq);
+  while($ro = $res->fetch_assoc())
+  {
+       echo "<tr>";
+         echo "<td>". $ro["ID"]."</td>";
+         echo "<td>". $ro["Accountnofrom"]."</td>";
+         echo "<td>". $ro["Accountnoto"]."</td>";
+         echo "<td>". $ro["Amount"]."</td>";
+       echo "</tr>";
+  }
   ?>
   </table>
         </div>
       </div>
     </div>
   </body>
+</html>

@@ -30,20 +30,20 @@
         <div class="leftcol-data">
           <p> Contents: </p>
           <ul>
-            <li><a href="homepage.php"><mo> Home </mo></a> </li>
-            <li><a href="transfer.php"><mo> Transfer Money</mo></a> </li>
-            <li><a href="history.php"><mo> Transactions</mo></a> </li>
-            <li><b><a href="details.php"><mo><b> Customers</mo></b></a> </li>
+            <li><a href="homepage.php">  Home  </a> </li>
+            <li><a href="transfer.php">  Transfer Money </a> </li>
+            <li><a href="history.php">  Transactions </a> </li>
+            <li><b><a href="details.php"> Customers </a></b> </li>
           </ul>
         </div>
       </div>
 
-      <div class="centercol" style ="width: calc(80% - 50px)" >
+      <div class="centercol" style="height:auto;">
         <div class="leftcol-data">
           <div class="heading">
       <?php
           $a=$_POST['abcd'];
-          echo("  <p>Details for Accountno: $a</p>");
+          echo(" <br> <h1>Details for Accountno: $a</h1>");
       ?>
           </div>
           <div class="data1">
@@ -91,10 +91,13 @@
 
        echo "</tr>";
   }
-           echo("  <p>Transactions History</p>");
-
 ?>
 </table>
+
+<br>
+<br>
+<h1><center> Transaction History </center></h1>
+<br>
 <table>
   <tr>
     <th> Transaction ID </th>

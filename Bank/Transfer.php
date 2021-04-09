@@ -22,7 +22,7 @@
     </div>
     <div class="column">
 
-      <div class="leftcol" style ="width: calc(20% - 30px)">
+      <div class="leftcol" style ="width: calc(20% - 30px);">
         <div class="leftcol-data">
           <p> Contents:<br> </p>
           <ul>
@@ -38,11 +38,9 @@
         <div class="leftcol-data">
           <div class="heading">
       <?php
-          $a=10000;
           echo("<p>Transfer Money</p>");
       ?>
           </div>
-          <div class="data1">
 
 <?php
   $servername= "localhost";
@@ -62,101 +60,25 @@
 
   $result = $con->query($sql);
 ?>
-</div>
-<!--
-<table>
-  <tr>
-    <th> Account no. </th>
-    <th> Name </th>
-    <th> Email address </th>
-    <th> Balance </th>
-    <th> DOB </th>
-  </tr> -->
 
-
-
-  <!-- <style>
-  .dropbtn{
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-  }
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dropdown a:hover {background-color: #ddd;}
-
-  .show {display: block;}
-  </style>
-  <h2>Clickable Dropdown</h2>
-  <p>Click on the button to open the dropdown menu.</p>
-
-  <div class="dropdow">
-    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-    <div id="myDrop" class="dropdown-content">
-      <?php
-      // while($row = $result->fetch_assoc())
-      // {
-      //    $r=$row['Accountno'];
-      //    echo($r ."<a href='#$r'>");
-      // }
-      ?>
-      <! <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a> -->
-  <!--  </div>
-  </div>
-
-  <script>
-  /* When the user clicks on the button,
-  toggle between hiding and showing the dropdown content */
-  function myFunction(){
-    document.getElementById("myDrop").classList.toggle("show");
-  }
-
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
+  <div class="dropdown">
+    <button class="dropbtn"> AccountNum From </button>
+      <div class="accountNumbers">
+        <?php
+        while($row = $result->fetch_assoc())
+        {
+           $r=$row['Accountno'];
+           echo("<a href='#$r'>$r ");
         }
-      }
-    }
-  }
-  </script> -->
+        ?>
 
-  <?php
+      </div>
+    </div>
+
+
+
+
+<?php
   $f=10000;
   $t=10041;
   $a=3000;
@@ -169,11 +91,11 @@
   $bat=$con->query($s);
   $balt=$bat->fetch_assoc();
   $bat=$balt['Balance'];
-if($f==$t)
-{
-  echo("You can't Transfer in your own account!! Select Another Account!!");
-}
-else {
+  if($f==$t)
+  {
+    echo("You can't Transfer in your own account!! Select Another Account!!");
+  }
+  else {
 
 
   if($baf>=$a)
@@ -189,46 +111,10 @@ else {
   else {
     echo ("The Accountno: $f does not have Rs.$a to Transfer!!");
   }
-}
-
-  // while($row = $result->fetch_assoc())
-  // {
-  //        echo "<tr>";
-         // echo "<td>". $row["Accountno"]."</td>";
-         // echo "<td>". $row["Name"]."</td>";
-         // echo "<td>". $row["Email"]."</td>";
-         // echo "<td>". $row["Balance"]."</td>";
-         // echo "<td>". $row["DOB"]."</td>";
-         // echo "<td>". $row["DOB"]."</td>";
-
-  //      echo "</tr>";
-  // }
-  //          echo("  <p>Transactions History</p>");
-
+  }
 ?>
-<!-- </table>  -->
-<!-- <table>
-  <tr>
-    <th> Transaction ID. </th>
-    <th> Account no. from </th>
-    <th> Account no. to </th>
-    <th> Amount </th>
-  </tr> -->
-<?php
- // $sq= "SELECT * FROM Transfer WHERE Accountnofrom=$a OR Accountnoto=$a";
- //
- // $res = $con->query($sq);
- //  while($ro = $res->fetch_assoc())
- //  {
- //       echo "<tr>";
- //         echo "<td>". $ro["ID"]."</td>";
- //         echo "<td>". $ro["Accountnofrom"]."</td>";
- //         echo "<td>". $ro["Accountnoto"]."</td>";
- //         echo "<td>". $ro["Amount"]."</td>";
- //       echo "</tr>";
- //  }
-  ?>
-  <!-- </table> -->
+</div>
+</div>
         </div>
       </div>
     </div>
