@@ -1,0 +1,178 @@
+*{
+  padding: auto;margin:auto;
+}
+.navbar{
+  background-color: #006666;
+  width: calc( 100% - 20px);
+  height: auto;
+  padding: 10px;
+  }
+    .navbar .text{
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      }
+    .navbar .text p{
+      /* background-color: yellow; */
+      font-size: 8vh;
+      color:white;
+      font-weight:900;
+}
+.pannel{
+  width: 100%;
+  height:auto;
+  /* background-color:  ; */
+  /* display: none; */
+}
+.pannel ul{
+  background-color:  #ccffff;
+  width: 100%;
+  float: right;
+  text-align: center;
+  margin: auto;
+  /* all */
+  padding: 10px;
+  /* top-bottom   left-right */
+  /* top right bottom left    clockwise*/
+  /* padding: 10px 50px; */
+  /* padding: 20px 10px 10px 50px; */
+}
+.pannel ul li{
+  display: inline;
+  margin-left: 100px;
+}
+
+.pannel ul li a{
+  /* background-color: yellow; */
+  color:black;
+  list-style: none;
+  font-size: 4vh;
+  font-weight: 500;
+  /* color: black; */
+  font-weight: 550;
+  text-decoration: none;
+}
+.column{
+  /* background-color: grey; */
+  width: calc(100% - 60px);
+  padding: 0px 30px;
+  height: auto;
+  display: block;
+}
+.column .leftcol{
+  /* background-color: blue; */
+  float: left;
+  margin-top: 20px;
+  box-shadow: 0px 0px 15px 0.5px grey;
+  /* display: inline; */
+  width:calc(20% - 30px);
+  height:500px;
+   padding: 10px;
+  }
+.column .leftcol .leftcol-data p{
+  font-size: 4vh;
+}
+.column .leftcol .leftcol-data ul, li, a, mo{
+  color:black;
+  list-style: none;
+  font-size: 3vh;
+  /* font-weight: 500; */
+  /* color: black; */
+  /* font-weight: 550; */
+  /* text-decoration: none; */
+}
+.column .leftcol .leftcol-data ul, li, mo, b, a{
+  font-weight: 650px;
+}
+.column .centercol{
+  /* background-color: blue; */
+  /* display: inline; */
+  float: left;
+  margin-top: 20px;
+  box-shadow: 0px 0px 15px 0.5px grey;
+  width: calc(60% - 40px);
+  height:500px;
+  margin-left: 20px;
+  /* margin-right: 20px; */
+  padding: 10px;
+}
+.column .centercol .heading{
+  /* background-color: red; */
+  text-align: center;
+  width: 100%;
+  height: 60px;
+}
+.column .centercol .heading p{
+  font-size: 45px;
+  line-height: 60px;
+  font-weight: 600;
+  font-family: segoe ui;
+}
+.column .centercol .data1{
+  text-align: center;
+  margin-top:20px;
+  width: 90%;
+}
+
+.column .centercol .data1 p{
+  font-size: 20px;
+  font-family: segoe ui;
+
+}
+
+.column .centercol .imagesmainbox{
+  /* background-color: red; */
+  width: calc(100% - 40px);
+  height: 248px;
+  padding: 0px 20px;
+  margin-top: 35px;
+}
+.column .centercol .imagesbox{
+  /* display: inline; */
+  float: left;
+  margin: 0px;
+  width: 50%;
+  background-color: grey;
+}
+.column .centercol img{
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+
+.column .centercol table{
+  /* background-color: red; */
+  width: 95%;
+  margin-left: 20px;
+  border:1px solid black;
+}
+.column .centercol table th{
+  padding: 5px 0px 5px 10px;
+  text-align: left;
+  border:2.2px solid black;
+}
+.column .centercol table, td{
+  border-collapse: collapse;
+  border:1px solid black;
+  padding: 5px 0px 5px 10px;
+  }
+
+.column .rightcol{
+  /* background-color: blue; */
+  /* display: inline; */
+  margin-top: 20px;
+  box-shadow: 0px 0px 15px 0.5px grey;
+  width:calc(20% - 30px);
+  float: left;
+  height:500px;
+  margin-left: 20px;
+
+  padding: 10px;
+
+}
+
+
+
+
+/* End*/
