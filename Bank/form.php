@@ -22,7 +22,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modern Bank of Nation</title>
-  <link href="style.css" rel="stylesheet">
+  <link href="style2.css" rel="stylesheet">
 </head>
 
 <div class="navbar">
@@ -33,7 +33,7 @@
 <div class="pannel">
   <ul>
     <li><a href="homepage.php"> Home </a> </li>
-    <li><a href="transfer.php"> Transfer Money</a> </li>
+    <li><a href="form.php"> Transfer Money</a> </li>
     <li><a href="history.php"> Transactions</a> </li>
     <li><a href="details.php"> Customers</a> </li>
   </ul>
@@ -44,10 +44,10 @@
     <div class="leftcol-data">
       <p> Contents:<br> </p>
       <ul>
-        <li><a href="homepage.php"><mo> Home </mo></a> </li>
-        <li><mo><b><a href="transfer.php"> Transfer Money</a></mo></b> </li>
-        <li><a href="history.php"><mo> Transactions</mo></a> </li>
-        <li><mo><a href="details.php"> Customers</mo></a> </li>
+        <li><a href="homepage.php"> Home </a> </li>
+        <li><b><a href="form.php"> Transfer Money</a></b> </li>
+        <li><a href="history.php"> Transactions</a> </li>
+        <li><a href="details.php"> Customers</a> </li>
       </ul>
     </div>
   </div>
@@ -61,8 +61,8 @@
       </div>
 <body>
 
-  <form method="POST">
-    <label for="fromt">Account number from </label>
+  <form method="POST" action="Transfer.php">
+    <label for="from">Account number from </label>
     <select id="from" name="from">
       <option id="values" value="select">Choose option</option>
     <?php
@@ -79,11 +79,15 @@
     <select id="to" name="to">
       <option value="select">Choose option</option>
     <?php
+    $sql= "SELECT Accountno FROM Customer";
+
+    $result = $con->query($sql);
     while($row = $result->fetch_assoc())
     {
       $r=$row['Accountno'];
       echo "  <option value= $r> $r </option>";
     }
+    $con->close();
     ?>
     </select>
 <br><br>
@@ -98,7 +102,9 @@
 
 <?php
 if($_POST){
-  echo $_POST['amount'];
+  $a= $_POST['amount'];
+  $f= $_POST['from'];
+  $t= $_POST['to'];
 }
 
 

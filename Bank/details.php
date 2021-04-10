@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Bank of Nation</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
   </head>
   <body>
     <div class="navbar">
@@ -14,7 +14,7 @@
     <div class="pannel">
       <ul>
         <li><a href="homepage.php"> Home </a> </li>
-        <li><a href="transfer.php"> Transfer Money</a> </li>
+        <li><a href="form.php"> Transfer Money</a> </li>
         <li><a href="history.php"> Transactions</a> </li>
         <li><a href="details.php"> Customers</a> </li>
       </ul>
@@ -25,10 +25,10 @@
         <div class="leftcol-data">
           <p> Contents:<br> </p>
           <ul>
-            <li><a href="homepage.php"><mo> Home </mo></a> </li>
-            <li><a href="transfer.php"><mo> Transfer Money</mo></a> </li>
-            <li><a href="history.php"><mo> Transactions</mo></a> </li>
-            <li><mo><b><a href="details.php"> Customers</a></mo></b> </li>
+            <li><a href="homepage.php"> Home </a> </li>
+            <li><a href="form.php"> Transfer Money</a> </li>
+            <li><a href="history.php"> Transactions</a> </li>
+            <li><b><a href="details.php"> Customers</a></b> </li>
           </ul>
         </div>
       </div>

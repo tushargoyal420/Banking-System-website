@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Bank of Nation</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
   </head>
   <body>
 
@@ -15,7 +15,7 @@
     <div class="pannel">
       <ul>
         <li><a href="homepage.php"> Home </a> </li>
-        <li><a href="transfer.php"> Transfer Money</a> </li>
+        <li><a href="form.php"> Transfer Money</a> </li>
         <li><a href="history.php"> Transactions</a> </li>
         <li><a href="details.php"> Customers</a> </li>
       </ul>
@@ -26,10 +26,10 @@
         <div class="leftcol-data">
           <p> Contents:<br> </p>
           <ul>
-            <li><a href="homepage.php"><mo> Home </mo></a> </li>
-            <li><mo><b><a href="transfer.php"> Transfer Money</a></mo></b> </li>
-            <li><a href="history.php"><mo> Transactions</mo></a> </li>
-            <li><mo><a href="details.php"> Customers</mo></a> </li>
+            <li><a href="homepage.php"> Home </a> </li>
+            <li><b><a href="form.php"> Transfer Money</a></b> </li>
+            <li><a href="history.php"> Transactions</a> </li>
+            <li><a href="details.php"> Customers</a> </li>
           </ul>
         </div>
       </div>
@@ -60,28 +60,33 @@
 
   $result = $con->query($sql);
 ?>
-
+<!--
   <div class="dropdown">
     <button class="dropbtn"> AccountNum From </button>
       <div class="accountNumbers">
         <?php
-        while($row = $result->fetch_assoc())
-        {
-           $r=$row['Accountno'];
-           echo("<a href='#$r'>$r ");
-        }
+        // while($row = $result->fetch_assoc())
+        // {
+        //    $r=$row['Accountno'];
+        //    echo("<a href='#$r'>$r ");
+        // }
         ?>
 
       </div>
-    </div>
+    </div> -->
 
 
 
 
 <?php
-  $f=10000;
-  $t=10041;
-  $a=3000;
+  // $f=10000;
+  // $t=10041;
+  // $a=3000;
+  if($_POST){
+    $a= $_POST['amount'];
+    $f= $_POST['from'];
+    $t= $_POST['to'];
+  }
 
   $s="SELECT Name,Balance FROM Customer WHERE Accountno=$f";
   $baf=$con->query($s);
