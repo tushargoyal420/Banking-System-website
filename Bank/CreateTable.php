@@ -12,7 +12,7 @@ if (!$con)
 	die("Connection failed: " . mysqli_connect_error());
 }
 
-sql to create table
+// sql to create table
 $sql= "CREATE TABLE Customer(
 Accountno INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 Name VARCHAR(30) NOT NULL,

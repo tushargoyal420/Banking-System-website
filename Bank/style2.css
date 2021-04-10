@@ -130,23 +130,28 @@
   text-align: center;
   width: 100%;
   height: 60px;
+
 }
+.column .centercol .heading .heading-style p{
+text-shadow: 0px 5px 10px grey;
+ font-style: segoe ui;
+}
+
 .column .centercol .heading p{
   font-size: 45px;
   line-height: 60px;
   font-weight: 600;
   font-family: segoe ui;
 }
-.column .centercol .data1{
+/* .column .centercol .data1{
   text-align: center;
-  margin-top:20px;
+  margin-top:0px;
   width: 60%;
-}
+} */
 
 .column .centercol .data1 p{
   font-size: 20px;
   font-family: segoe ui;
-
 }
 
 .column .centercol .imagesmainbox{
@@ -154,18 +159,18 @@
   width: calc(100% - 40px);
   height: 248px;
   padding: 0px 20px;
-  margin-top: 35px;
+  margin-top: 15px;
 }
 .column .centercol .imagesbox{
   /* display: inline; */
   float: left;
-  margin: 0px;
-  width: 50%;
-  background-color: grey;
+  margin: 0px 23px;
+  width: 95%;
+  /* background-color: grey; */
 }
 .column .centercol img{
   margin: auto;
-  height: 100%;
+  height: 95%;
   width: 100%;
 }
 
@@ -192,49 +197,113 @@
   display: inline-block;
 }
 
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-   border: none;
-   cursor: pointer;
-}
-
 #values {
-  display: none;  position: absolute;
-  background-color: #f9f9f9;  min-width: 160px;
+  /* display: none;   */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 }
 
 #values a {
-  color: black;  padding: 12px 16px;
-  text-decoration: none;  display: block;
-}
-
-#values a:hover {
-  background-color: #f1f1f1
-}
-#from:hover #values {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
   display: block;
 }
-#from:hover .dropbtn {
-  background-color: #3e8e41;
+
+#from, #to{
+  box-shadow: 0px 0px 6px 1px grey;
+  background-color: white;
+  color:grey;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: segoe ui;
+  border: 0px;
 }
 
 
+/* form css */
 
 
+/* baap hu m tera////// */
 
+.formmain{
+  box-shadow: 0px 5px 8px 1px grey;
+  /* background-color: red; */
+  width: 50%;
+  padding: 20px ;
+  text-align: center;
+  margin-top: 20px;
+  height: 270px;
+}
+.formmain label{
+  /* background-color:red; */
+  font-family: segoe ui;
+  text-align: left;
+  font-size: 20px;
+  /* width: 60px; */
+}
+.formmain .labelbox{
+  /* background-color: grey; */
+  /* display: inline;   */
+  text-align: left;
+  width: 50%;
+  padding-left:40px;
+  float: left;
+}
+.formmain #from{
+  /* text-align: right; */
+  /* background-color: yellow; */
+}
+.formmain .formfrom, .formto, .formamount{
+  /* background-color: grey; */
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.formmain .formamount .amountt input{
+  /* background-color: blue; */
+  padding: 10px;
+  width: 130px;
+  border:0px white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 1px grey;
+}
+.formmain .formsubmit input{
+  width: 85%;
+  height: 40px;
+  border:0px;
+  background-color: #006666;
+  color:white;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 40px;
+  border-radius: 40px;
+  transition: transform 0.5s;
 
+}
 
+.formmain .formsubmit input:hover{
+  transform: scale(1.1,1.1);
 
+}
+.formsubmit{
+  text-align:center;
+}
 
+.viewmore{
+  border:0px;
+  padding: 5px 10px;
+  background-color: #006666;
+  color:white;
+  font-weight: 400;
+  font-size: 15px;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+.viewmore:hover{
 
-
-
-
-
-
+transform: scale(1.1,1.1);
+}
 /* End*/

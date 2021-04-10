@@ -24,7 +24,7 @@
 
       <div class="leftcol">
         <div class="leftcol-data">
-          <p> Contents:<br> </p>
+          <p class="content"> Contents:<br> </p>
           <ul>
             <li><b><a href="homepage.php"> Home </a></b> </li>
             <li><a href="form.php"> Transfer Money</a> </li>
@@ -37,28 +37,35 @@
       <div class="centercol" style ="width: calc(80% - 50px)">
         <div class="leftcol-data">
           <div class="heading">
-            <p> Welcome to the Bank </p>
+            <div class="heading-style">
+
+            <p><i> "Experience Next Generation Banking" </i></p>
           </div>
-          <div class="data1">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-             <!-- labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
-            </p>
-          </div>
+        </div>
+          <!-- <div class="data1"> -->
+            <!-- <p>
+              The Nation banks on us.<br>
+              Pure Banking Nothing Else.<br>
+              With you all the way. <br>
+              A bank of the common man.
+            </p> -->
+          <!-- </div> -->
 
           <div class="imagesmainbox">
-            <div class="imagesbox">
+            <!-- <div class="imagesbox">
               <img src= "img/two.jpg" alt="image">
             </div>
             <div class="imagesbox">
               <img src= "img/two.jpg" alt="image" style="transform: rotateY(180deg);">
-            </div>
-            <!-- <div class="imagesbox">
-              <img src= "img/one.jpg" alt="image">
-            </div>
-            <div class="imagesbox">
-              <img src= "img/two.jpg" alt="image">
             </div> -->
+
+           <div class="imagesbox">
+              <img src= "img/banner.jpg" alt="image" style="margin-bottom:20px;">
+            </div>
+
+           <div class="imagesbox">
+              <img src= "img/banner2.jpg" alt="image">
+            </div>
 
           </div>
         </div>

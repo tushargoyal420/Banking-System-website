@@ -42,7 +42,7 @@
 
   <div class="leftcol" style ="width: calc(20% - 30px);">
     <div class="leftcol-data">
-      <p> Contents:<br> </p>
+      <p class="content"> Contents:<br> </p>
       <ul>
         <li><a href="homepage.php"> Home </a> </li>
         <li><b><a href="form.php"> Transfer Money</a></b> </li>
@@ -60,42 +60,60 @@
   ?>
       </div>
 <body>
+  <div class="formmain">
+    <!-- Form  -->
+    <form method="POST" action="Transfer.php">
+      <div class="formfrom">
+        <div class="labelbox">
+          <label for="from">Account No. From</label>
+        </div>
+        <select id="from" name="from" required>
+          <option id="choose" value="">Choose option</option>
+            <?php
+              while($row = $result->fetch_assoc())
+              {
+                $r=$row['Accountno'];
+                echo "  <option value= $r> $r </option>";
+              }
+            ?>
+        </select>
+      </div>
+      <div class="formto">
+        <!-- to option -->
+        <div class="labelbox">
+          <label for="to">Account No. To</label>
+        </div>
+        <select id="to" name="to" required>
+          <option id="choose" value="">Choose option</option>
+            <?php
+              $sql= "SELECT Accountno FROM Customer";
 
-  <form method="POST" action="Transfer.php">
-    <label for="from">Account number from </label>
-    <select id="from" name="from">
-      <option id="values" value="select">Choose option</option>
-    <?php
-    while($row = $result->fetch_assoc())
-    {
-      $r=$row['Accountno'];
-      echo "  <option id='values' value= $r> $r </option>";
-    }
-    ?>
-    </select>
+              $result = $con->query($sql);
+              while($row = $result->fetch_assoc())
+              {
+                $r=$row['Accountno'];
+                echo "  <option value= $r> $r </option>";
+              }
+              $con->close();
+            ?>
+        </select>
+      </div>
+      <div class="formamount">
+        <!-- amount -->
+        <div class="labelbox">
+          <label for="amount"> Enter  Amount</label>
+        </div>
+        <div class="amountt">
+          <input type="number"  placeholder="Rupees." step="0.01" name="amount" required> <br><br>
+        </div>
+      </div>
+      <div class="formsubmit">
+        <!-- Submit -->
+          <input type="submit" name="submit">
+      </div>
+    </form>
 
-<br><br>
-    <label for="to">Account number to </label>
-    <select id="to" name="to">
-      <option value="select">Choose option</option>
-    <?php
-    $sql= "SELECT Accountno FROM Customer";
-
-    $result = $con->query($sql);
-    while($row = $result->fetch_assoc())
-    {
-      $r=$row['Accountno'];
-      echo "  <option value= $r> $r </option>";
-    }
-    $con->close();
-    ?>
-    </select>
-<br><br>
-    <label for="amount"> Enter Amount</label>
-    <input type="number" step="0.01" name="amount">
-<br><br>
-    <input type="submit" name="submit">
-  </form>
+  </div>
 </body>
 </html>
 

@@ -23,7 +23,7 @@
 
       <div class="leftcol" style ="width: calc(20% - 30px)">
         <div class="leftcol-data">
-          <p> Contents:<br> </p>
+          <p class="content"> Contents:<br> </p>
           <ul>
             <li><a href="homepage.php"> Home </a> </li>
             <li><a href="form.php"> Transfer Money</a> </li>
@@ -61,10 +61,10 @@
   </div>
 
 <table >
-  <tr >
+  <tr style= 'font-size: 18px;'>
     <th> Account no. </th>
     <th> Name </th>
-    <th> View More Details </th>
+    <th style= 'text-align:center;'> View More Details </th>
   </tr>
 
     <form name="form" action="alldetails.php" method="POST">
@@ -72,17 +72,14 @@
      while($row = $result->fetch_assoc())
      {
           echo "<tr>";
-            echo "<td>". $row["Accountno"]."</td>";
-            echo "<td>". $row["Name"]."</td>";
-            echo ("<td><button type='submit' name='abcd' value=\"{$row['Accountno']}\">View More Details</button></td>");
+            echo "<td style= 'width:20%;'>". $row["Accountno"]."</td>";
+            echo "<td style= 'width:60%;'>". $row["Name"]."</td>";
+            echo ("<td style= 'width:20%; text-align:center;'><button type='submit' class='viewmore' name='abcd' value=\"{$row['Accountno']}\">View More Details</button></td>");
           echo "</tr>";
      }
      ?>
      </select>
      </form>
-  <?php
-
-  ?>
   </table>
         </div>
       </div>

@@ -24,7 +24,7 @@
 
       <div class="leftcol" style ="width: calc(20% - 30px);">
         <div class="leftcol-data">
-          <p> Contents:<br> </p>
+          <p class="content"> Contents:<br> </p>
           <ul>
             <li><a href="homepage.php"> Home </a> </li>
             <li><b><a href="form.php"> Transfer Money</a></b> </li>
@@ -36,11 +36,7 @@
 
       <div class="centercol" style ="width: calc(80% - 50px)" >
         <div class="leftcol-data">
-          <div class="heading">
-      <?php
-          echo("<p>Transfer Money</p>");
-      ?>
-          </div>
+
 
 <?php
   $servername= "localhost";
@@ -98,7 +94,8 @@
   $bat=$balt['Balance'];
   if($f==$t)
   {
-    echo("You can't Transfer in your own account!! Select Another Account!!");
+    echo "<div class='heading'><p>Transaction Failed :(</p></div>";
+    echo("<br><br><br><br><br><br><br><br><center><h2>You can't Transfer in your own account!! Select Another Account!!</h2></center>");
   }
   else {
 
@@ -111,10 +108,15 @@
       $b=$con->query($s);
       $s="INSERT INTO Transfer VALUES(NULL,$f,$t,$a)";
       $b=$con->query($s);
-      echo ("Rs.$a Transfered from ".$f."(".$bal['Name']."'s) to ". $t. "(" .$balt['Name']."'s) Account.");
+      echo"  <div class='heading'><p>Transaction Successful ;)</p>  </div>";
+      echo ("<br><br><br><br><br><br><br><br><center><h2>Rs.$a Transferred from ".$f."(".$bal['Name']."'s)<br>to<br>". $t. "(" .$balt['Name']."'s) Account.</h2></center>");
+
+
+
   }
   else {
-    echo ("The Accountno: $f does not have Rs.$a to Transfer!!");
+    echo "<div class='heading'><p>Transaction Failed :(</p></div>";
+    echo ("<br><br><br><br><br><br><br><br><center><h2>The Accountno: $f does not have Rs.$a to Transfer!!</h2></center>");
   }
   }
 ?>

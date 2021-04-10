@@ -28,7 +28,7 @@
 
       <div class="leftcol" style ="width: calc(20% - 30px)">
         <div class="leftcol-data">
-          <p> Contents: </p>
+          <p class="content"> Contents: </p>
           <ul>
             <li><a href="homepage.php">  Home  </a> </li>
             <li><a href="form.php">  Transfer Money </a> </li>
